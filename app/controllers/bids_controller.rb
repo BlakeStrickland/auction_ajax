@@ -6,7 +6,9 @@ class BidsController < ApplicationController
     if @bid.save
 
       redirect_to @bid.item, notice: 'Your bid has been recorded!'
+
     else
+      # redirect_to @bid.item, notice: "Your bid is invalid"
       @item = @bid.item
       render "items/show"
     end
